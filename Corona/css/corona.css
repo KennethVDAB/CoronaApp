@@ -1,0 +1,99 @@
+@font-face {
+    font-family: RobagaBold;
+    src : url("fonts/RobagaRoundedBold.otf");
+}
+
+body {
+    font-size: 100%;
+}
+
+button {
+    font-family : RobagaBold;
+}
+
+.banner {
+    width: 100%;
+    height : 200px;
+    background-image: url("elearning2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+div.stap {
+    width : 33%;
+    height : 200px;
+    display : inline-block;
+    font-family: RobagaBold;;
+}
+
+div.titelstap {
+    font-family: RobagaBold;
+    font-size : 2em;
+    margin-top : 50px;
+    margin-bottom: 50px;
+}
+
+.active {
+    color: lightseagreen;
+}
+
+.nonactive {
+    color : lightgray;
+    background-color: white;
+    border-color: darkgray;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+
+div.proces {
+    margin-top : 5px;
+    margin-bottom : 5px;
+    width : 100%;
+}
+
+div.invoervak {
+    margin-bottom: 10px;;
+}
+
+.procestitel {
+    width : 100%;
+    height : 30px;
+    background-color: black;
+    color : darkturquoise;
+    margin-top:5px;
+}
+
+button {
+    float: left;
+}
+
+label {
+    display: inline-block;
+    column-width: 200px;
+}
+
+input {
+    display: inline;
+    width: 200px;
+}
+
+span#titel {
+    font-family : RobagaBold;
+    font-size : 5em;
+    display: block;
+    margin : auto;
+    width : 50%;
+    padding: 50px 0;
+}
+
+span#maakprofiel {
+    font-family: RobagaBold;
+    font-size: 1em;
+    display : block;
+    margin : auto;
+    padding : 8px 8px;
+}

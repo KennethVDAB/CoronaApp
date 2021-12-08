@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Coronacijfers</title>
+
+    <link rel="stylesheet" type="text/css" href="css/corona.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="js/corona.js" defer></script>
+
+</head>
+
+<body>
+<label for="provincie"><select id="provincie">
+    <option value="0">--kies je provincie</option>
+    <option value="Antwerpen">Antwerpen</option>
+    <option value="Limburg">Limburg</option>
+    <option value="OostVlaanderen">Oost-Vlaanderen</option>
+    <option value="WestVlaanderen">West-Vlaanderen</option>
+</select>
+</label>
+
+<canvas id="myChart" style="width:100%;max-width:1200px"></canvas>
+
+</body>
+
+</html>
