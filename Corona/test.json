@@ -1,0 +1,121 @@
+[
+  {
+    "DATE": "2020-03-01",
+    "PROVINCE": "Antwerpen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 18,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-01",
+    "PROVINCE": "Limburg",
+    "REGION": "Flanders",
+    "TESTS_ALL": 7,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-01",
+    "PROVINCE": "OostVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 12,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-01",
+    "PROVINCE": "VlaamsBrabant",
+    "REGION": "Flanders",
+    "TESTS_ALL": 15,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-01",
+    "PROVINCE": "WestVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 4,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-02",
+    "PROVINCE": "Antwerpen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 38,
+    "TESTS_ALL_POS": 1
+  },
+  {
+    "DATE": "2020-03-02",
+    "PROVINCE": "Limburg",
+    "REGION": "Flanders",
+    "TESTS_ALL": 23,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-02",
+    "PROVINCE": "OostVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 42,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-02",
+    "PROVINCE": "WestVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 79,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-03",
+    "PROVINCE": "Antwerpen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 112,
+    "TESTS_ALL_POS": 1
+  },
+  {
+    "DATE": "2020-03-03",
+    "PROVINCE": "Limburg",
+    "REGION": "Flanders",
+    "TESTS_ALL": 23,
+    "TESTS_ALL_POS": 0
+  },
+  {
+    "DATE": "2020-03-03",
+    "PROVINCE": "OostVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 97,
+    "TESTS_ALL_POS": 1
+  },
+  {
+    "DATE": "2020-03-03",
+    "PROVINCE": "WestVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 65,
+    "TESTS_ALL_POS": 1
+  },
+  {
+    "DATE": "2020-03-04",
+    "PROVINCE": "Antwerpen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 131,
+    "TESTS_ALL_POS": 3
+  },
+  {
+    "DATE": "2021-12-07",
+    "PROVINCE": "Limburg",
+    "REGION": "Flanders",
+    "TESTS_ALL": 238,
+    "TESTS_ALL_POS": 38
+  },
+  {
+    "DATE": "2021-12-07",
+    "PROVINCE": "OostVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 850,
+    "TESTS_ALL_POS": 141
+  },
+  {
+    "DATE": "2021-12-07",
+    "PROVINCE": "WestVlaanderen",
+    "REGION": "Flanders",
+    "TESTS_ALL": 1431,
+    "TESTS_ALL_POS": 304
+  }
+]

@@ -34,6 +34,7 @@ let myChart = new Chart(ctx, {
 // JSON file lezen en resultaten verwerken:
 async function leesJson() {
     let response = await fetch("COVID19BE_tests.json");
+    // let response = await fetch("test.json");
 
     if (response.ok) {
         const alleTesten = await response.json().then(testen => {
@@ -55,10 +56,10 @@ async function leesJson() {
 
             provSelect.addEventListener("change", () => {
                 let recordsPerProvincie = [];
+                const gekozenProvincie = provSelect.value;
+                console.log("Provincie: " + gekozenProvincie);
                 for (let record of juisterecords) {
-                    const gekozenProvincie = provSelect.value;
                     if (record.PROVINCE === gekozenProvincie) {
-                        console.log("Provincie: " + gekozenProvincie)
                         recordsPerProvincie.push(record);
                     }
                 }
@@ -71,7 +72,10 @@ async function leesJson() {
 
 // Op basis van de aangeduide provincie, de gegevens verwerken:
 function verwerkJuisteTesten(records) {
+    // Bestaande data verwijderen
+    removeData(myChart);
     console.log("Verwerk testen");
+    console.log("Aantal records: " + records.length);
     let posratio = 0;
 
     for (let i = 0; i < records.length; i++) {
@@ -82,11 +86,9 @@ function verwerkJuisteTesten(records) {
         }
         yValues.push(posratio);
     }
-    console.log(xValues);
-    console.log(yValues);
 
-    // Update Chart:
-    myChart.update();
+    // Data toevoegen en updaten:
+    addData(myChart, xValues, yValues);
 
     clearArrays();
 }
@@ -94,6 +96,19 @@ function verwerkJuisteTesten(records) {
 function clearArrays() {
     xValues = [];
     yValues = [];
+}
+
+function addData(chart, data) {
+    chart.data.datasets.data = data;
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
 }
 
 
