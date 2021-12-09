@@ -10,26 +10,35 @@ const provSelect = document.getElementById("provincie");
 leesJson();
 
 //declaratie van een object van de klasse Chart
-let myChart = new Chart(ctx, {
-    type: "line",
-    data: {
-        labels: xValues,
-        datasets: [{
-            fill: false,
-            lineTension: 0,
-            backgroundColor: "rgba(0,0,255,1.0)",
-            borderColor: "rgba(0,0,255,0.1)",
-            data: yValues
-        }]
-    },
-    options: {
-        responsive: true,
-        legend: {display: false},
-        scales: {
-            yAxes: [{ticks: {min: 0, max: 100}}],
+let chart = getChart();
+
+function getChart() {
+    return new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            responsive: true,
+            legend: {display: false},
+            scales: {
+                x: {
+                    display: true
+                },
+                y: {
+                    display: true
+                }
+            }
         }
-    }
-});
+    });
+}
 
 // JSON file lezen en resultaten verwerken:
 async function leesJson() {
@@ -55,6 +64,9 @@ async function leesJson() {
             console.log("Aantal onvolledige records: " + fout);
 
             provSelect.addEventListener("change", () => {
+                // Bestaande data verwijderen
+                removeData();
+
                 let recordsPerProvincie = [];
                 const gekozenProvincie = provSelect.value;
                 console.log("Provincie: " + gekozenProvincie);
@@ -72,8 +84,6 @@ async function leesJson() {
 
 // Op basis van de aangeduide provincie, de gegevens verwerken:
 function verwerkJuisteTesten(records) {
-    // Bestaande data verwijderen
-    removeData(myChart);
     console.log("Verwerk testen");
     console.log("Aantal records: " + records.length);
     let posratio = 0;
@@ -88,7 +98,7 @@ function verwerkJuisteTesten(records) {
     }
 
     // Data toevoegen en updaten:
-    addData(myChart, xValues, yValues);
+    addData(yValues);
 
     clearArrays();
 }
@@ -98,17 +108,23 @@ function clearArrays() {
     yValues = [];
 }
 
-function addData(chart, data) {
+function addData(data) {
+    chart.destroy();
+    chart = getChart();
     chart.data.datasets.data = data;
-    chart.update();
+    chart.reset();
+    chart.update('active');
 }
 
-function removeData(chart) {
+function removeData() {
+    chart.destroy();
+    chart = getChart();
     chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
         dataset.data.pop();
     });
-    chart.update();
+    chart.reset();
+    chart.update('active');
 }
 
 
