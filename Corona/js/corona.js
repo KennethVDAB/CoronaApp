@@ -98,7 +98,7 @@ function verwerkJuisteTesten(records) {
     }
 
     // Data toevoegen en updaten:
-    addData(yValues);
+    addData(xValues, yValues);
 
     clearArrays();
 }
@@ -108,22 +108,17 @@ function clearArrays() {
     yValues = [];
 }
 
-function addData(data) {
-    chart.destroy();
-    chart = getChart();
-    chart.data.datasets.data = data;
-    chart.reset();
-    chart.update('active');
+function addData(xValues, yValues) {
+    chart.data.labels=xValues;
+    chart.data.datasets[0].data=yValues;
+    chart.update();
 }
 
 function removeData() {
-    chart.destroy();
-    chart = getChart();
     chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
         dataset.data.pop();
     });
-    chart.reset();
     chart.update('active');
 }
 
